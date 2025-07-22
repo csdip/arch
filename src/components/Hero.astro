@@ -1,0 +1,32 @@
+---
+import "../scss/main.css";
+import {Image} from "astro:assets";
+import arrowRight from "/public/img/arrow-right-line.svg";
+---
+
+
+<!-- ========== Hero ========== -->
+<section class="hero" id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="hero__wrapper">
+              <div class="hero__text-content">
+                <h1>Project Paramour</h1>
+                <p>
+                  Project made for an art museum near Southwest London. Project
+                  Paramour is a statement of bold, modern architecture.
+                </p>
+                <a href="/portfolio" class="btn">see our Protfolio <Image src={arrowRight} alt="" class="arrow-icon"/></a>
+              </div>	
+              <div class="hero__navs d-flex align-center">
+                <span class="active">01</span>
+                <span>02</span>
+                <span>03</span>
+                <span>04</span>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>

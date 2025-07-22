@@ -1,0 +1,120 @@
+@use '../utils/' as *;
+@use '../global/' as *;
+
+
+/* -------------------------------------
+            Footer Desktop
+------------------------------------- */
+.footer {
+    margin-top: 180px;
+    position: relative;
+
+    &__wrapper {
+        background-color: #eeeff4;
+        height: 200px;
+        width: 90%;
+
+        &-menu {
+            @include mainMenu;
+            margin-left: 40px;
+        }
+
+        .btn {
+            margin-right: -104px;
+        }
+    }
+
+    &__logo {
+        background-color: $color-primary;
+        display: block;
+        height: 200px;
+        line-height: 220px;
+        width: 200px;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/* -------------------------------------
+            Footer Tablet
+------------------------------------- */
+@media (max-width:960px) {
+    .footer {
+
+        &__wrapper {
+            position: absolute;
+            left: 0;
+            width: 80%;
+
+            &-menu {
+                margin-left: 25px;
+
+                li {
+                    &:not(:first-child) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .btn {
+                margin-right: -108px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/* -------------------------------------
+            Footer Mobile
+------------------------------------- */
+@media (max-width:768px) {
+    .footer {
+        padding-bottom: 50px;
+
+        &__logo{
+            margin-top: -75px;
+            width: 150px;
+            height: 150px;
+            line-height: 180px;
+            margin-bottom: 20px;
+
+            img{
+                width: 80px;
+            }
+        }
+
+        &__wrapper {
+            width: 100%;
+            flex-direction: column;
+            height: auto;
+
+            &-menu {
+                margin-left: 0px;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                li {
+                    text-align: center;
+                    width: 100%;
+                    padding: 15px 0;
+                    &:not(:first-child) {
+                        margin-left: 0px;
+                    }
+                }
+            }
+
+            .btn {
+                margin-right: -0;
+                margin-inline: auto;
+            }
+        }
+    }
+}

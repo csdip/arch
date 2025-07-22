@@ -1,0 +1,185 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+
+/* -------------------------------------
+            Featured Desktop
+------------------------------------- */
+.featured {
+    .see-all {
+        margin-bottom: 60px;
+
+        .btn{
+            float: right;
+        }
+    }
+
+    h2 {
+        font-size: 68px;
+    }
+
+    &__single {
+        position: relative;
+        overflow: hidden;
+
+        &.featured-1{
+            &::before{
+                content: '1';
+                position: absolute;
+                top: 0;
+                right: -20px;
+                font-size: 300px;
+                font-weight: $bold;
+                color: $color-light;
+                opacity: .5;
+            }
+        }
+
+        &.featured-2{
+            &::before{
+                content: '2';
+                position: absolute;
+                top: 0;
+                right: -20px;
+                font-size: 300px;
+                font-weight: $bold;
+                color: $color-light;
+                opacity: .5;
+            }
+        }
+
+          &.featured-3{
+            &::before{
+                content: '3';
+                position: absolute;
+                top: 0;
+                right: -20px;
+                font-size: 300px;
+                font-weight: $bold;
+                color: $color-light;
+                opacity: .5;
+            }
+        }
+
+
+
+        &--thumbnail {
+            width: 100%;
+            transition: all .4s ease;
+        }
+
+        &--texts {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, $color-dark, transparent);
+            padding: 30px;
+
+            h4 {
+                color: $color-light;
+                font-size: 33px;
+                margin-bottom: 8px;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: $semibold;
+                color: $color-light;
+                opacity: .75;
+            }
+        }
+
+        &:hover {
+            .featured__single--thumbnail {
+                transform: scale(1.1);
+            }
+        }
+
+        .date-hide{
+        display: none;
+    }
+    }
+}
+
+
+
+
+
+
+/* -------------------------------------
+            Featured Tablet
+------------------------------------- */
+@media (max-width:960px) {
+    .featured {
+        .col-6{
+            width: 50%;
+        }
+        &__single {
+            margin-bottom: 20px;
+
+            .fthumb-1 {
+                content: url(../../../img/featured-tab-img01.jpg);
+            }
+            .fthumb-2 {
+                content: url(../../../img/featured-tab-img02.jpg);
+            }
+            .fthumb-3 {
+                content: url(../../../img/featured-tab-img03.jpg);
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+/* -------------------------------------
+            Featured Mobile
+------------------------------------- */
+@media (max-width:768px){
+    .featured {
+
+        .see-all-desktop{
+            display: none;
+        }
+        .see-all-mobile{
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+    &__single {
+
+        .fthumb-1 {
+                content: url(../../../img/featured-mob-img01.jpg);
+            }
+            .fthumb-2 {
+                content: url(../../../img/featured-mob-img02.jpg);
+            }
+            .fthumb-3 {
+                content: url(../../../img/featured-mob-img03.jpg);
+            }
+
+        &.featured-1{
+            &::before{
+                display: none;
+            }
+        }
+        &.featured-2{
+            &::before{
+                display: none;
+            }
+        }
+        &.featured-3{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+}

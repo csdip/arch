@@ -1,0 +1,31 @@
+---
+import "../scss/main.css";
+import MainLayout from "../components/MainLayout.astro"
+import SingleFeatured from "../components/SingleFeatured.astro";
+---
+
+<MainLayout title="Arch Studio Multipage Website | Portfolio">
+
+<!-- ========== Portfolio Page ========== -->
+<section id="featured" class="featured portfolio">
+	<div class="container">
+		<div class="row">
+			<SingleFeatured image={"/img/portfolio-img01.jpg"} dateStr="September 2019" title="Seraph Station" imgClass={"featured__single--thumbnail thumb-1"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img02.jpg" dateStr="August 2017" title="Eebox Building" imgClass={"featured__single--thumbnail thumb-2"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img03.jpg" dateStr="March 2017" title="Federal II Tower" imgClass={"featured__single--thumbnail thumb-3"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/featured-img01.jpg" dateStr="January 2016" title="Project Del Sol" imgClass={"featured__single--thumbnail thumb-4"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/featured-img02.jpg" dateStr="October 2015" title="Le Prototype" imgClass={"featured__single--thumbnail thumb-5"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/featured-img03.jpg" dateStr="April 2015" title="228B Tower" imgClass={"featured__single--thumbnail thumb-6"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img07.jpg" dateStr="December 2013" title="Grand Edelweiss Hotel" imgClass={"featured__single--thumbnail thumb-7"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img08.jpg" dateStr="August 2012" title="Netcry Tower" imgClass={"featured__single--thumbnail thumb-8"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img09.jpg" dateStr="January 2012" title="Hypers" imgClass={"featured__single--thumbnail thumb-9"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img10.jpg" dateStr="March 2011" title="SXIV Tower" imgClass={"featured__single--thumbnail thumb-10"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img11.jpg" dateStr="September 2010" title="Trinity Bank Tower" imgClass={"featured__single--thumbnail thumb-11"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+			<SingleFeatured image="/img/portfolio-img12.jpg" dateStr="February 2008" title="Project Paramour" imgClass={"featured__single--thumbnail thumb-12"} featuredClass={"featured__single"} linkHide={"link-hide"}/>
+		</div>
+		<button class="btn m-l-auto see-all-mobile d-none">see all <img src="/img/arrow-right-line.svg" alt="" class="arrow-icon"/></button>
+	</div>
+</section>
+
+
+</MainLayout>

@@ -1,0 +1,132 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+
+/* -------------------------------------
+            Welcome Desktop
+------------------------------------- */
+.welcome {
+
+    &__text-content {
+        width: 535px;
+        padding-right: 80px;
+        padding-top: 65px;
+        margin-left: auto;
+        position: relative;
+        z-index: 3;
+
+        strong {
+            font-size: 242px;
+            position: absolute;
+            top: -109px;
+            left: -185px;
+            color: #eeeff4;
+            text-transform: capitalize;
+            z-index: -1;
+        }
+
+        h2 {
+            font-size: 70px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-weight: $semibold;
+        }
+    }
+
+    &__img-content {
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width:1200px) {
+
+    .welcome {
+
+        strong {
+            font-size: 212px;
+            top: -98px;
+            left: -96px;
+        }
+
+
+
+    }
+
+}
+
+
+
+
+
+/* -------------------------------------
+            Welcome Tablet
+------------------------------------- */
+@media (max-width:960px) {
+
+    .welcome {
+
+        .col-8 {
+            width: 100%;
+        }
+
+        &__text-content {
+            width: 100%;
+
+
+            strong {
+                font-size: 165px;
+                top: -98px;
+                left: -30px;
+            }
+        }
+
+        &__img-content {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+/* -------------------------------------
+            Welcome Mobile
+------------------------------------- */
+@media (max-width:768px) {
+
+    .welcome {
+        margin-top: 80px;
+
+        span{
+            display: block;
+            width: 100px;
+            height: 2px;
+            background-color: #eeeff4;
+        }
+
+        &__text-content {
+            padding: 0;
+            strong {
+                display: none;
+            }
+            h2{
+                padding-top: 60px;
+                font-size: 56px;
+            }
+        }
+
+    }
+
+}

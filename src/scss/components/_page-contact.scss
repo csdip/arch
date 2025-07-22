@@ -1,0 +1,180 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            Page Contact Desktop
+------------------------------------- */
+.details {
+  &__text-content {
+    h2 {
+      @include secTitle;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__address {
+    padding-left: 100px;
+    .btn {
+      background: none;
+      color: $color-primary;
+      padding: 0;
+      margin-top: 30px;
+    }
+  }
+}
+
+.location {
+  &__map {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+.contactForm {
+  h2 {
+    @include secTitle;
+    margin: 0;
+    padding: 0;
+  }
+
+//   .name,
+//   .email,
+//   .message {
+//     position: relative;
+
+//     &::before {
+//       content: "";
+//       position: absolute;
+//       bottom: 20px;
+//       left: 0;
+//       right: 0;
+//       width: 0;
+//       height: 3px;
+//       background-color: $color-primary;
+//       transition: all 0.3s ease;
+//     }
+
+//     &.active {
+//       &::before {
+//         width: 100%;
+//       }
+//     }
+//   }
+
+  .message {
+    &::before {
+      bottom: 0;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: $semibold;
+    color: $color-primary;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $color-primary;
+    background-color: $color-light;
+    transition: all 0.3s ease;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    transition: all .3s ease;
+
+    &::placeholder {
+      color: #dfe0e7;
+      font-weight: $semibold;
+      font-size: 24px;
+    }
+
+    &:focus{
+        border-bottom: 3px solid $color-primary;
+        transition: all .3s ease;
+    }
+  }
+
+  textarea {
+    @extend input;
+    max-width: 100%;
+    min-width: 100%;
+    height: 200px;
+    min-height: 100px;
+    max-height: 300px;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    margin-left: auto;
+    img {
+      margin-left: 0;
+    }
+  }
+}
+
+/* -------------------------------------
+            Page Contact Tablet
+------------------------------------- */
+@media (max-width: 960px) {
+  .details {
+    .col-8 {
+      flex-direction: column;
+    }
+    &__address {
+      padding-left: 0px;
+      padding-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .btn {
+        margin: 0;
+        padding-right: 60px;
+      }
+    }
+  }
+  .contactForm {
+    .col-8 {
+      margin-top: 80px;
+    }
+  }
+}
+
+/* -------------------------------------
+            Page Contact Mobile
+------------------------------------- */
+
+@media (max-width: 768px) {
+  .details {
+    h2 {
+      @include secTitleMobile;
+    }
+    .col-8 {
+      flex-direction: column;
+    }
+    &__address {
+      flex-direction: column;
+      align-items: start;
+
+      .btn {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .contactForm {
+    h2 {
+      @include secTitleMobile;
+    }
+
+    .btn{
+        margin-top: -5px;
+    }
+  }
+}

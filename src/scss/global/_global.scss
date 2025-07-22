@@ -1,0 +1,133 @@
+@use "../utils/" as *;
+
+// =============== Global CSS ===============
+
+*,
+*::after,
+*::before,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body,
+textarea,
+input {
+  font-size: 15px;
+  line-height: 1;
+  font-family: $f-f-spartan;
+}
+
+body {
+  background-color: $color-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+  font-size: 34px;
+  color: $color-primary;
+  font-weight: $bold;
+  font-family: $f-f-spartan;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+p,
+span {
+  color: $color-secondary;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+section{
+  margin-top: 180px;
+}
+
+button,
+.btn {
+  position: relative;
+  color: $color-light;
+  background-color: $color-primary;
+  font-size: 18px;
+  font-weight: $bold;
+  font-family: $f-f-spartan;
+  border-radius: 0px;
+  border: none;
+  padding: 30px 45px;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  text-transform: capitalize;
+  overflow: hidden;
+  z-index: 1;
+  
+  &::before {
+      content: "";
+      position: absolute;
+      bottom: -295px;
+      left: -201px;
+      opacity: 0;
+      visibility: hidden;
+      background-color: #ffffff10;
+      width: 0px;
+      height: 0px;
+      border-radius: 10000px;
+      z-index: -1;
+      transition: all 0.6s ease-in-out;
+    }
+    
+    img {
+        margin-left: 10px;
+        transition: all 0.4s ease-in-out;
+  }
+}
+
+button:hover,
+.btn:hover {
+  &::before {
+    width: 300px;
+    height: 300px;
+    left: -28px;
+    bottom: -80px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  img{
+    transform: translateX(6px);
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  justify-content: space-between;
+}

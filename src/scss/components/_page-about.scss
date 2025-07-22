@@ -1,0 +1,187 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+            Page About Desktop
+------------------------------------- */
+.innerPageHero {
+  margin-top: 0 !important;
+
+  .col {
+    position: relative;
+  }
+
+  &__text-content {
+    position: absolute;
+    width: 600px;
+    bottom: 0;
+    right: 0;
+    padding: 140px 0 0 140px;
+    margin-left: auto;
+    z-index: 3;
+    background-color: $color-light;
+
+    span {
+      @include secLine;
+    }
+
+    strong {
+      font-size: 220px;
+      position: absolute;
+      top: -109px;
+      left: 34px;
+      color: #eeeff4;
+      text-transform: capitalize;
+      z-index: -1;
+    }
+
+    h2 {
+      @include secTitle;
+    }
+
+    p {
+      font-weight: $semibold;
+    }
+  }
+
+  &__img-content {
+    width: 630px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+    }
+  }
+}
+
+.heritage {
+  &__text-content {
+    padding-right: 68px;
+  }
+  h2 {
+    @include secTitle;
+  }
+
+  span {
+    @include secLine;
+  }
+  p {
+    font-weight: $semibold;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.leaders {
+
+  h2{
+    @include secTitle;
+  }
+  &__single {
+    width: 47%;
+    margin-bottom: 20px;
+
+    &--text-content {
+      padding-top: 10px;
+
+      h3 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--img {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .innerPageHero {
+    &__text-content {
+      width: 532px;
+      padding: 140px 0 0 80px;
+    }
+    strong {
+      font-size: 180px;
+      top: -72px;
+      left: 73px;
+    }
+  }
+}
+
+/* -------------------------------------
+            Page About Tablet
+------------------------------------- */
+@media (max-width: 960px) {
+  .innerPageHero {
+    &__text-content {
+      strong {
+        font-size: 165px;
+        top: -70px;
+        left: 80px;
+      }
+    }
+  }
+
+  .heritage {
+    &__img-content {
+      display: none;
+    }
+  }
+}
+
+/* -------------------------------------
+            Page About Mobile
+------------------------------------- */
+@media (max-width: 768px) {
+  .innerPageHero {
+    margin-top: 80px;
+
+    &__text-content {
+      position: unset;
+      padding: 0;
+      padding-top: 80px;
+      width: 100%;
+
+      strong {
+        display: none;
+      }
+      h2 {
+        @include secTitleMobile;
+      }
+    }
+
+    &__img-content {
+      width: 100%;
+
+      img {
+        height: 300px;
+      }
+    }
+  }
+
+  .heritage {
+    &__text-content {
+      padding: 0;
+    }
+    h2 {
+      @include secTitleMobile;
+    }
+  }
+
+  .leaders{
+    &__single{
+      width: 100%;
+    }
+
+    h2 {
+      @include secTitleMobile;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+
+@use '../utils/' as *;
+@use './global' as *;
+
+/* -------------------------------------
+            Mixin Desktop
+------------------------------------- */
+@mixin mainMenu{
+    margin-left: 90px;
+        li{
+            
+            &:not(:first-child){
+                margin-left: 50px;
+            }
+            a{
+                font-size: 18px;
+                font-weight: $bold;
+                color: $color-secondary;
+                text-transform: capitalize;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: $color-primary;
+                }
+
+                &.active{
+                    color: $color-primary;
+                }
+            }
+        }
+}
+
+
+@mixin secTitle{
+    font-size: 70px;
+        margin-bottom: 40px;
+        padding-top: 40px;
+}
+
+@mixin secTitleMobile{
+padding-top: 60px;
+        font-size: 56px;
+}
+
+@mixin secLine{
+    display: block;
+      width: 60px;
+      height: 2px;
+      background-color: #eeeff4;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------
+            Mixin Tablet
+------------------------------------- */
+
+
+
+
+
+
+
+/* -------------------------------------
+Mixin Mobile
+------------------------------------- */

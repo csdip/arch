@@ -1,0 +1,21 @@
+---
+import "../scss/main.css";
+import {Image} from "astro:assets";
+import arrowRight from "/public/img/arrow-right-line.svg";
+---
+
+<!-- ========== Team ========== -->
+<section id="team" class="team">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="team__wrapper">
+              <div class="text-content">
+				<h3>Small team, big ideas</h3>
+			  <a href="/portfolio" class="btn">see our Protfolio <Image src={arrowRight} alt="" class="arrow-icon"/></a>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

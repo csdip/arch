@@ -1,0 +1,92 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+
+/* -------------------------------------
+            Team Desktop
+------------------------------------- */
+.team {
+    &__wrapper {
+        position: relative;
+        background-image: url(../../../img/team-img.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        padding: 142px 95px;
+        z-index: 1;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.164); 
+            z-index: -1;
+        }
+
+        .text-content {
+            width: 500px;
+            h3 {
+                font-size: 90px;
+                color: $color-light;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------
+            Team Tablet
+------------------------------------- */
+@media (max-width:960px){
+
+    .team{
+        &__wrapper{
+            .text-content{
+                width: 100%;
+
+                h3{
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+/* -------------------------------------
+            Team Mobile
+------------------------------------- */
+
+@media (max-width:768px){
+
+    .team{
+        &__wrapper{
+            padding: 80px 20px;
+            .text-content{
+                h3{
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+
+
+}
+

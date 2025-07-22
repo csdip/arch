@@ -1,0 +1,98 @@
+
+
+// =============== Google Font Links ===============
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+
+/* -------------------------------------
+             Template Fonts
+------------------------------------- */
+
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$black: 900;
+$f-f-spartan: "League Spartan", sans-serif;
+
+
+
+
+
+
+/* -------------------------------------
+            Template Colors
+------------------------------------- */
+
+$color-dark: #000000;
+$color-light: #ffffff;
+$color-grey: #b4b4b4;
+$color-primary: #1B1D23;
+$color-secondary: #7D828F;
+
+
+
+
+
+ 
+.preloader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+  }
+
+  .loader-container{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-light;
+    width: 100vw;
+    height: 100vh;
+    z-index: 88;
+  }
+
+
+  @keyframes l5 {
+      0%  {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: $color-primary }
+      33% {box-shadow: 20px 0 $color-primary, -20px 0 #0002;background: #0002}
+      66% {box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: #0002}
+      100%{box-shadow: 20px 0 #0002,-20px 0 $color-primary; background: $color-primary }
+  }
+
+
+  .container-hidden{
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+@keyframes changing {
+    0%{
+        background: linear-gradient(#c6d404, #ff6600, #b700ff, #4400ff);
+    }
+    25%{
+        background: linear-gradient(#4400ff, #ff6600, #b700ff, #c6d404);
+    }
+    50%{
+        background: linear-gradient(#c6d404, #ff6600, #b700ff, #4400ff);
+    }
+    100%{
+        background: linear-gradient(#ff6600, #c6d404, #4400ff, #b700ff);
+    }
+}

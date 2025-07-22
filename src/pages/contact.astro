@@ -1,0 +1,96 @@
+---
+import "../scss/main.css";
+import {Image} from "astro:assets";
+import MainLayout from "../components/MainLayout.astro";
+import contact from "/public/img/contact-img.jpg";
+import arrow from "/public/img/arrow-right-line.svg";
+import arrowdark from "/public/img/arrow-right-dark.svg";
+---
+
+<MainLayout title="Arch Studio Multipage Website | Contact">
+
+
+<!-- ========== Contact ========== -->
+<section id="innerPageHero" class="innerPageHero">
+      <div class="container">
+        <div class="row align-end">
+            <div class="col">
+            <div class="innerPageHero__img-content">
+              <Image src={contact} alt="innerPageHero-image" />
+            </div>
+            <div class="innerPageHero__text-content">
+                <span></span>
+                <strong>contact</strong>
+                <h2>Tell us about your project</h2>
+                <p>
+                    We’d love to hear more about your project. Please, leave a message below or give us a call. We have two offices, one in Texas and one in Tennessee. If you find yourself nearby, come say hello!
+                </p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Details ========== -->
+    <section id="details" class="details">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="details__text-content">
+                        <h2>Contact details</h2>
+                    </div>
+                </div>
+                <div class="col-8 d-flex">
+                    <div class="details__address">
+                        <p>Main Office <br> <br>
+                            Mail: archone@mail.com <br>
+                            Address: 1892 Chenoweth Drive <br> 
+                            Phone: 123-456-3451
+                        </p>
+                        <a class="btn" href="#">View on map <Image src={arrowdark} alt="arrow-right-line"></a>
+                    </div>
+                    <div class="details__address">
+                        <p>Office II <br> <br>
+                            Mail: archtwo@mail.com <br>
+                            Address: 3399 Wines Lane TX <br>
+                            Phone: 832-123-4321
+                        </p>
+                        <a class="btn" href="#">View on map <Image src={arrowdark} alt="arrow-right-line"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== Location ========== -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="location__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3571.0649213577994!2d90.5540165571008!3d26.485854461358844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1753159113300!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Contact Form ========== -->
+    <section id="contactForm" class="contactForm">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h2>Connect with us</h2>
+                </div>
+                <div class="col-8">
+                    <div class="name"><input type="text" name="name" id="name" placeholder="Name" required></div>
+                    <div class="email"><input type="email" name="email" id="name" placeholder="Email" required></div>
+                    <div class="message"><textarea name="message" id="message" placeholder="Message"></textarea></div>
+                    <button aria-label="submit" class="btn"><Image src={arrow} alt="send a message button"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</MainLayout>

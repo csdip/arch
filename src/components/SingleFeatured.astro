@@ -1,0 +1,17 @@
+---
+import "../scss/main.css";
+const {image, title, imgClass, featuredClass, linkHide, dateClass, dateStr} = Astro.props;
+---
+
+
+
+<div class="col-4">
+    <div class={featuredClass}>
+        <img src={image} alt="" class={imgClass}>
+        <div class="featured__single--texts">
+            <h4>{title}</h4>
+            <a href="#" class={linkHide}>View All Projects</a>
+            <p class={dateClass}>{dateStr}</p>
+        </div>
+    </div>
+</div>

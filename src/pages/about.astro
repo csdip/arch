@@ -1,0 +1,115 @@
+---
+import "../scss/main.css";
+import MainLayout from "../components/MainLayout.astro"
+import {Image} from "astro:assets";
+import about from "/public/img/about-img.jpg";
+import heritage from "/public/img/heritage-img.jpg";
+import leader1 from "/public/img/leader-avtar-1.jpg";
+import leader2 from "/public/img/leader-avtar-2.jpg";
+import leader3 from "/public/img/leader-avtar-3.jpg";
+import leader4 from "/public/img/leader-avtar-4.jpg";
+
+
+---
+
+<MainLayout title="Arch Studio Multipage Website | About">
+
+<!-- ========== About ========== -->
+<section id="innerPageHero" class="innerPageHero">
+      <div class="container">
+        <div class="row align-end">
+            <div class="col">
+            <div class="innerPageHero__img-content">
+              <Image src={about} alt="innerPageHero-image" />
+            </div>
+            <div class="innerPageHero__text-content">
+                <span></span>
+                <strong>about</strong>
+                <h2>Your team of professionals</h2>
+                <p>
+                    Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.
+                </p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    
+
+<!-- ========== Heritage ========== -->
+<section id="heritage" class="heritage">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="heritage__text-content">
+              <span></span>
+              <h2>Our Heritage</h2>
+              <p>
+                Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country. <br> <br>
+
+                Specializing in Urban Design allowed us to focus on creating exceptional structures that live in harmony with their surroundings. We consider every detail from every surrounding element to inform our designs. <br> <br>
+
+                Our small team of world-class professionals provides input on every project.
+              </p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="heritage__img-content">
+              <Image src={heritage} alt="heritage-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ========== Leaders ========== -->
+<section id="leaders" class="leaders">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h2>The Leaders</h2>
+      </div>
+      <div class="col-8 d-flex flex-wrap gap-3">
+        <div class="leaders__single">
+          <div class="leaders__single--img">
+            <Image src={leader1} alt="leader profile picture" />
+          </div>
+          <div class="leaders__single--text-content">
+            <h3>Jake Richards</h3>
+            <p>Chief Architect</p>
+          </div>
+        </div>
+        <div class="leaders__single">
+          <div class="leaders__single--img">
+            <Image src={leader2} alt="leader profile picture" />
+          </div>
+          <div class="leaders__single--text-content">
+            <h3>Thompson Smith</h3>
+            <p>Head of Finance</p>
+          </div>
+        </div>
+        <div class="leaders__single">
+          <div class="leaders__single--img">
+            <Image src={leader3} alt="leader profile picture" />
+          </div>
+          <div class="leaders__single--text-content">
+            <h3>Jackson Rourke</h3>
+            <p>Lead Designer</p>
+          </div>
+        </div>
+        <div class="leaders__single">
+          <div class="leaders__single--img">
+            <Image src={leader4} alt="leader profile picture" />
+          </div>
+          <div class="leaders__single--text-content">
+            <h3>Maria Simpson</h3>
+            <p>Senior Architect</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</MainLayout>

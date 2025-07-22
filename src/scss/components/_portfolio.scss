@@ -1,0 +1,145 @@
+@use "../utils/" as *;
+@use "../global/" as *;
+
+/* -------------------------------------
+Page Portfolio Desktop
+------------------------------------- */
+.featured {
+
+  &.portfolio{
+    margin-top: 0 !important;
+  }
+  
+    &__single {
+        position: relative;
+        margin-bottom: 30px;
+        overflow: hidden;
+
+    &--thumbnail {
+      width: 100%;
+      transition: all 0.4s ease;
+    }
+
+    &--texts {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, $color-dark, transparent);
+      padding: 30px;
+
+      h4 {
+        color: $color-light;
+        font-size: 33px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: $semibold;
+        color: $color-light;
+        opacity: 0.75;
+      }
+    }
+    .link-hide{
+        display: none;
+    }
+  }
+}
+
+/* -------------------------------------
+            Page Portfolio Tablet
+------------------------------------- */
+@media (max-width: 960px) {
+  .featured {
+    .col-6 {
+      width: 50%;
+    }
+    &__single {
+      margin-bottom: 20px;
+
+      .thumb-1 {
+        content: url(../../../img/portfolio-tab-img01.jpg);
+      }
+      .thumb-2 {
+        content: url(../../../img/portfolio-tab-img02.jpg);
+      }
+      .thumb-3 {
+        content: url(../../../img/portfolio-tab-img03.jpg);
+      }
+      .thumb-4 {
+        content: url(../../../img/featured-tab-img01.jpg);
+      }
+      .thumb-5 {
+        content: url(../../../img/featured-tab-img02.jpg);
+      }
+      .thumb-6 {
+        content: url(../../../img/featured-tab-img03.jpg);
+      }
+      .thumb-7 {
+        content: url(../../../img/portfolio-tab-img07.jpg);
+      }
+      .thumb-8 {
+        content: url(../../../img/portfolio-tab-img08.jpg);
+      }
+      .thumb-9 {
+        content: url(../../../img/portfolio-tab-img09.jpg);
+      }
+      .thumb-10 {
+        content: url(../../../img/portfolio-tab-img10.jpg);
+      }
+      .thumb-11 {
+        content: url(../../../img/portfolio-tab-img11.jpg);
+      }
+      .thumb-12 {
+        content: url(../../../img/portfolio-tab-img12.jpg);
+      }
+    }
+  }
+}
+
+/* -------------------------------------
+            Page Portfolio Mobile
+------------------------------------- */
+@media (max-width: 768px) {
+  .featured {
+    &__single {
+      .thumb-1 {
+        content: url(../../../img/portfolio-mob-img01.jpg);
+      }
+      .thumb-2 {
+        content: url(../../../img/portfolio-mob-img02.jpg);
+      }
+      .thumb-3 {
+        content: url(../../../img/portfolio-mob-img03.jpg);
+      }
+      .thumb-4 {
+        content: url(../../../img/featured-mob-img01.jpg);
+      }
+      .thumb-5 {
+        content: url(../../../img/featured-mob-img02.jpg);
+      }
+      .thumb-6 {
+        content: url(../../../img/featured-mob-img03.jpg);
+      }
+      .thumb-7 {
+        content: url(../../../img/portfolio-mob-img07.jpg);
+      }
+      .thumb-8 {
+        content: url(../../../img/portfolio-mob-img08.jpg);
+      }
+      .thumb-9 {
+        content: url(../../../img/portfolio-mob-img09.jpg);
+      }
+      .thumb-10 {
+        content: url(../../../img/portfolio-mob-img10.jpg);
+      }
+      .thumb-11 {
+        content: url(../../../img/portfolio-mob-img11.jpg);
+      }
+      .thumb-12 {
+        content: url(../../../img/portfolio-mob-img12.jpg);
+      }
+    }
+  }
+}

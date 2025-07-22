@@ -1,0 +1,77 @@
+---
+import "../scss/main.css";
+import { Image } from "astro:assets";
+import logo from "/public/img/logo.svg";
+import logoLight from "/public/img/logo-light.svg";
+import arrowRight from "/public/img/arrow-right-line.svg";
+
+const  {currentPageTitle = "Home"} = Astro.props;
+const  {title = "Arch Studio Multipage Website | Home", description} = Astro.props;
+
+const siteData = {
+  description: "Arch Studio a multipage website designed with AstroJS",
+}
+
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={siteData.description}>
+    <title>{title}</title>
+    <link rel="stylesheet" href="../scss/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"/>
+    
+  </head>
+  <body>
+    <div class="overlay"></div>
+
+    <!-- ========== Header ========== -->
+    <header class="header" id="header">
+      <div class="container">
+        <div class="current-page">{currentPageTitle}</div>
+        <div class="row">
+          <div class="col d-flex align-center">
+            <a href="/" class="header__logo"><Image src={logo} alt="logo" /></a>
+            <ul class="header__menu d-flex align-center">
+              <li><a href="/portfolio">Protfolio</a></li>
+              <li><a href="/about">About us</a></li>
+              <li><a href="/contact">contact</a></li>
+            </ul>
+            <div class="header__nav-btn"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <slot />
+    
+    <!-- ========== Footer ========== -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="footer__wrapper d-flex align-center">
+              <a href="/" class="footer__logo"><Image src={logoLight} alt="logo"> </a>
+                <ul class="footer__wrapper-menu d-flex align-center">
+                  <li><a href="/portfolio">Protfolio</a></li>
+                  <li><a href="/about">About us</a></li>
+                  <li><a href="/contact">contact</a></li>
+                </ul>
+                <a href="/portfolio" class="btn m-l-auto">see our Protfolio <Image src={arrowRight} alt=""class="arrow-icon"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+              <!-- ===== Preloader ===== -->
+        <div class="loader-container"><div class="preloader"></div></div> 
+      <script src="./main.js"></script>
+    </body>
+    </html>
+    
