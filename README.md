@@ -1,4 +1,4 @@
-🚀 # Arch Studio Multipage Website With Astro
+# Arch Studio Multipage Website With Astro 🚀
 
 
 [([https://developer.stackblitz.com/img/open_in_stackblitz.svg](https://raw.githubusercontent.com/github/explore/5cc0a03a302ec862c4aeac2a22a513ae31c35432/topics/astro/astro.png))]
